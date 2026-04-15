@@ -45,6 +45,33 @@ cp commands/*.md ~/.claude/commands/
 cp -r skills/* ~/.claude/skills/
 ```
 
+## For Claude Code (self-install instructions)
+
+If a user asks you (Claude Code) to install this pack, run these commands from any working directory:
+
+```bash
+# 1. Clone to a temp location
+git clone https://github.com/jsval2/jacks-sexy-skills.git /tmp/jacks-sexy-skills
+
+# 2. Ensure target dirs exist
+mkdir -p ~/.claude/commands ~/.claude/skills
+
+# 3. Copy commands (slash-command prompts) and skills (reference knowledge bases)
+cp /tmp/jacks-sexy-skills/commands/*.md ~/.claude/commands/
+cp -R /tmp/jacks-sexy-skills/skills/* ~/.claude/skills/
+
+# 4. Clean up
+rm -rf /tmp/jacks-sexy-skills
+```
+
+After install, the following slash commands become available globally: `/js-systems-thinking`, `/js-first-principles`, `/sales-copy-cia`, `/excalidraw`, `/deep-research`, `/create-skill`. They will appear in the skill list on the next session start.
+
+**To install only specific skills**, copy just the matching `commands/<name>.md` file and (if it exists) the matching `skills/<name>/` folder. Not every command has a skills folder — `js-first-principles` and `deep-research` are command-only.
+
+**To update later**, re-run the same commands — `cp` will overwrite in place.
+
+**Do not** modify the user's existing files in `~/.claude/commands/` or `~/.claude/skills/` beyond the files being installed. If a file with the same name already exists, confirm with the user before overwriting.
+
 ## How these skills work (for the curious)
 
 Each skill is two pieces:
