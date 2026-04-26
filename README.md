@@ -8,6 +8,7 @@ A curated pack of Claude Code slash commands and skills. Thinking partners, crea
 |---|---|---|
 | **Systems Thinking Partner** | `/js-systems-thinking` | Analyse any situation through systems-thinking lenses — stocks/flows, feedback loops, leverage points, archetypes. Includes the full Meadows/Senge/Forrester knowledge base as references. |
 | **First Principles Partner** | `/js-first-principles` | Breaks any problem — business, technical, personal, strategic — down to irreducible fundamentals and rebuilds from the ground up. Socratic coach + knowledge engine. |
+| **Musk Algorithm** | `/musk-algo` | Information-hungry thinking partner that runs Elon Musk's 5-step algorithm (requirements → delete → simplify → accelerate → automate) on whatever you're working on — code, business, strategy, personal systems. Ships with a deep reference on the algorithm, the idiot index, "best part is no part", physics-based reasoning, and first principles (Aristotle, Feynman, Bezos, Munger). Works mid-conversation or as a starter. |
 | **Sales Copy CIA** | `/sales-copy-cia` | Generates high-conversion copy using two stacked systems: a behavioural-psychology persuasion engine and master-level direct-response frameworks (Schwartz, Halbert, Hopkins, Ogilvy, Bencivenga, Carlton, Kennedy). Includes a "master directive" reference covering CIA/KUBARK psychology, fMRI neuroscience of buying, Milton Model hypnotic language, and the 12 Laws of Deep Persuasion. Use responsibly. |
 | **Excalidraw Diagram Generator** | `/excalidraw` | Turns a description into a valid Excalidraw JSON file with the right diagram type, layout, and visual structure. Ships with schema docs, layout patterns, and annotated examples. |
 | **Deep Research** | `/deep-research` | Executes an 8-phase research pipeline to produce comprehensive, rigorously sourced research on any topic. |
@@ -64,7 +65,7 @@ cp -R /tmp/jacks-sexy-skills/skills/* ~/.claude/skills/
 rm -rf /tmp/jacks-sexy-skills
 ```
 
-After install, the following slash commands become available globally: `/js-systems-thinking`, `/js-first-principles`, `/sales-copy-cia`, `/excalidraw`, `/deep-research`, `/create-skill`. They will appear in the skill list on the next session start.
+After install, the following slash commands become available globally: `/js-systems-thinking`, `/js-first-principles`, `/musk-algo`, `/sales-copy-cia`, `/excalidraw`, `/deep-research`, `/create-skill`. They will appear in the skill list on the next session start.
 
 **To install only specific skills**, copy just the matching `commands/<name>.md` file and (if it exists) the matching `skills/<name>/` folder. Not every command has a skills folder — `js-first-principles` and `deep-research` are command-only.
 
